@@ -23,27 +23,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-  <html lang="en">
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-    </head>
-    <body
-  className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen bg-transparent `}
->
-  {/* Background Image Layer */}
-  <div
-    className="absolute inset-0 -z-10 bg-cover bg-center opacity-50"
-    style={{
-      backgroundImage:
-        "url('/5523744.jpg')",
-    }}
-  />
-  
+    <html lang="en">
+      <head>
+        {/* ✅ Ensures full responsiveness on mobile */}
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+      </head>
 
-  {children}
-</body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen bg-transparent overflow-x-hidden`}
+      >
+        {/* ✅ Background image layer */}
+        <div
+          className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat opacity-50"
+          style={{
+            backgroundImage: "url('/5523744.jpg')",
+          }}
+        />
 
-  </html>
-)
-
+        {/* ✅ Content wrapper to handle mobile scaling */}
+        <main className="w-full h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
+          {children}
+        </main>
+      </body>
+    </html>
+  );
 }
