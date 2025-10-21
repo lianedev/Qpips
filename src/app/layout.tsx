@@ -25,32 +25,49 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* ✅ Chrome mobile viewport fix */}
+        {/* ✅ Fully mobile-optimized meta */}
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"
         />
+        <meta name="format-detection" content="telephone=no" />
       </head>
 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen bg-transparent overflow-x-hidden`}
         style={{
-          WebkitTextSizeAdjust: "100%", // ✅ prevents Chrome auto zoom text
-          overscrollBehavior: "none", // ✅ removes rubber band effect
+          WebkitTextSizeAdjust: "100%", // Prevents Chrome text zoom
+          textSizeAdjust: "100%",
+          overscrollBehavior: "none",
+          margin: 0,
+          padding: 0,
         }}
       >
-        {/* ✅ Background layer fix (no distortion) */}
+        {/* ✅ Optimized background for small screens */}
         <div
-          className="fixed top-0 left-0 w-full h-full -z-10 bg-cover bg-center bg-no-repeat opacity-50"
+          className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat opacity-60"
           style={{
             backgroundImage: "url('/5523744.jpg')",
-            backgroundAttachment: "fixed", // ✅ smooth scroll fix for Chrome
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            backgroundAttachment: "scroll", // Better for low-end mobile performance
           }}
         />
 
-        {/* ✅ Content wrapper */}
-        <main className="w-full h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
-          {children}
+        {/* ✅ Main container with adaptive spacing */}
+        <main
+          className="
+            flex flex-col items-center justify-center 
+            min-h-screen w-full 
+            px-4 sm:px-6 lg:px-8 
+            py-6 sm:py-8
+            space-y-4 sm:space-y-6
+            text-center
+          "
+        >
+          <div className="w-full max-w-[420px] sm:max-w-[640px] mx-auto">
+            {children}
+          </div>
         </main>
       </body>
     </html>
