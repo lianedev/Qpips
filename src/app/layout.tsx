@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html >
       <head>
         {/* ✅ Ensures full responsiveness on mobile */}
         <meta
