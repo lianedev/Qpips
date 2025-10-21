@@ -23,27 +23,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html >
+    <html lang="en" suppressHydrationWarning>
       <head>
-        {/* ✅ Ensures full responsiveness on mobile */}
+        {/* ✅ Chrome mobile viewport fix */}
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"
         />
       </head>
 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen bg-transparent overflow-x-hidden`}
+        style={{
+          WebkitTextSizeAdjust: "100%", // ✅ prevents Chrome auto zoom text
+          overscrollBehavior: "none", // ✅ removes rubber band effect
+        }}
       >
-        {/* ✅ Background image layer */}
+        {/* ✅ Background layer fix (no distortion) */}
         <div
-          className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat opacity-50"
+          className="fixed top-0 left-0 w-full h-full -z-10 bg-cover bg-center bg-no-repeat opacity-50"
           style={{
             backgroundImage: "url('/5523744.jpg')",
+            backgroundAttachment: "fixed", // ✅ smooth scroll fix for Chrome
           }}
         />
 
-        {/* ✅ Content wrapper to handle mobile scaling */}
+        {/* ✅ Content wrapper */}
         <main className="w-full h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
           {children}
         </main>
