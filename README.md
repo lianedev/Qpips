@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Prop Firm Website – Next.js Project Documentation
 
-## Getting Started
+This project is a prop firm website built with Next.js
+, bootstrapped using create-next-app. The project demonstrates your ability to implement modern web development practices, including optimized fonts, routing, and deployment.
 
-First, run the development server:
+Features
 
-```bash
+Next.js App Directory Structure: Uses the latest app routing (app/page.tsx) for fast rendering and scalability.
+
+Optimized Fonts: Uses next/font
+ to load Geist
+, ensuring quick page load and consistent typography.
+
+Responsive Design: Fully responsive layout for desktop, tablet, and mobile devices.
+
+Prop Firm Functionality: Placeholder pages and structure ready to handle:
+
+Account sign-up/login
+
+Funded account dashboards
+
+Trading challenge information
+
+Resource pages for traders
+
+Getting Started
+
+Clone the repository and start the development server:
+
+npm install
 npm run dev
 # or
+yarn install
 yarn dev
 # or
+pnpm install
 pnpm dev
 # or
+bun install
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open http://localhost:3000
+ in your browser. The page will automatically update as you edit app/page.tsx or other components.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+File Structure Highlights
 
-## Learn More
+app/ – Main app directory containing pages and components.
 
-To learn more about Next.js, take a look at the following resources:
+app/page.tsx – Main landing page. Modify this file to update the home page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+components/ – Optional folder for reusable UI components (e.g., navigation, footer, hero sections).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+public/ – Static assets like images and icons.
 
-## Deploy on Vercel
+styles/ – Tailwind or CSS files for styling components.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Learn More
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To deepen your knowledge of Next.js and features used:
+
+Next.js Documentation
+ – Comprehensive guides and API reference.
+
+Learn Next.js
+ – Interactive tutorial for beginners.
+
+Next.js GitHub Repository
+ – Open-source Next.js codebase.
+
+Deployment
+
+The recommended deployment platform is Vercel
+, the creators of Next.js:
+
+vercel deploy
+
+
+Refer to Next.js deployment documentation
+ for more options.
+
+Notes for This Challenge
+
+This project was created as part of a prop firm website challenge.
+
+Focus areas included:
+
+Fast, responsive UI
+
+Clean project structure
+
+Scalable component-based architecture
+
+Optimized performance with built-in Next.js features
