@@ -3,29 +3,34 @@ Prop Firm Website – Next.js Project Documentation
 This project is a prop firm website built with Next.js
 , bootstrapped using create-next-app. The project demonstrates your ability to implement modern web development practices, including optimized fonts, routing, and deployment.
 
+
+
 Features
 
-Next.js App Directory Structure: Uses the latest app routing (app/page.tsx) for fast rendering and scalability.
+--Next.js App Directory Structure: Uses the latest app routing (app/page.tsx) for fast rendering and scalability.
 
-Optimized Fonts: Uses next/font
+--Optimized Fonts: Uses next/font
  to load Geist
 , ensuring quick page load and consistent typography.
 
-Responsive Design: Fully responsive layout for desktop, tablet, and mobile devices.
+--Responsive Design: Fully responsive layout for desktop, tablet, and mobile devices.
 
-Prop Firm Functionality: Placeholder pages and structure ready to handle:
+--Prop Firm Functionality: Placeholder pages and structure ready to handle:
 
-Account sign-up/login
+--Account sign-up/login
 
-Funded account dashboards
+--Funded account dashboards
 
-Trading challenge information
+--Trading challenge information
 
-Resource pages for traders
+--Resource pages for traders
+
+
+
 
 Getting Started
 
-Clone the repository and start the development server:
+--Clone the repository and start the development server:
 
 npm install
 npm run dev
